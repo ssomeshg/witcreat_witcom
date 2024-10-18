@@ -1,0 +1,118 @@
+@charset "UTF-8";
+
+@media screen and (max-width: 767px){
+	body .common-header .navbar{
+		padding: 8px 0;
+	}
+	body .navbar-fixed-top.common-header .navbar {
+    background-color: rgba(255,255,255,1);
+}
+	.common-header .navbar-default .navbar-toggle {
+    background-color: #fff;
+    border: none;
+    padding: 2px;
+}
+.common-header .navbar-default .navbar-toggle .icon-bar {
+    background-color: #6b2a09;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    transition: 0.4s;
+    display: block;
+}
+.common-header .navbar-default .navbar-toggle .icon-bar.three {
+	width:25px;
+}
+.common-header .navbar-toggle.collapsed .icon-bar.three{
+	width:15px;
+}
+.common-header .navbar-toggle .icon-bar.one {
+    -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.common-header .navbar-toggle.collapsed .icon-bar {
+    -webkit-transform: none;
+    transform: none;
+}
+.common-header .navbar-toggle.collapsed .icon-bar.two {
+    opacity: 1;
+}
+.common-header .navbar-toggle .icon-bar.two {
+    opacity: 0;
+}
+.navbar-toggle .icon-bar.three {
+	width:25px;
+    -webkit-transform: rotate(45deg) translate(-6px, -8px);
+    transform: rotate(45deg) translate(-6px, -8px);
+}
+.navbar-collapse{
+	border: none;
+}
+
+.filter-bottom, .filter-title {
+    display: block;
+}
+
+}	
+
+@media screen and (min-width: 320px) and (max-width: 359px) and (orientation: portrait){
+}
+
+@media screen and (min-width: 320px) and (max-width: 599px) and (orientation: portrait){
+}
+
+@media screen and (min-width: 320px) and (max-width: 599px) and (orientation: landscape){ 
+
+}
+
+@media screen and (min-width: 600px) and  (max-width: 767px){
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){ 
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait){
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape){
+}
+
+@media screen and (min-width: 800px) and (max-width: 1280px){ 
+}
+
+@media screen and (min-width: 800px) and (max-width: 1280px) and (orientation: portrait){
+}
+@media screen and (min-width: 800px) and (max-width: 1280px) and (orientation: landscape){
+}
+
+@media screen and (max-width: 1024px){
+}
+@media (min-width: 1025px){
+	.cartitem-lits .placeorder-btn {
+		display: none;
+	}
+ .couponamount-wraper {
+    display: none;
+}
+}
+
+@media screen and (max-width: 1599px){
+}
+
+@media screen and (min-width: 1360px){
+.container {
+    width: 1280px;
+}
+}
+@media screen and (min-width: 768px){
+.sticky-wraper {
+    /*position: sticky;
+    position: -webkit-sticky;
+    top: 115px;*/
+}
+
+.panel-group {
+    min-height: 80vh;
+    margin-bottom: -6px;
+}
+}
+
