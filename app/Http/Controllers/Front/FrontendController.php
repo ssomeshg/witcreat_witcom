@@ -49,7 +49,7 @@ class FrontendController extends Controller
           $trending = Product::where('status','1')->where('trending','on')->orderBy('id','desc')->limit('4')->get();
         }
         $fronCategory= Category::where('status',1)->where('parent_category_id',0)->get();
-        return view('front.front',compact('Homeslider','Homecat','homeProduct','Product','trending','fronCategory','discount','Homecat2','Homecat3'));
+        return view('front.front',compact('Homeslider','Homecat','homeProduct','store','Product','trending','fronCategory','discount','Homecat2','Homecat3'));
     }
 
     public function product($id){
