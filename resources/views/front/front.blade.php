@@ -88,6 +88,339 @@ $array = [];
 </section>
 
 
+<!-- Product Section -->
+<section>
+   <div class="product-section">
+      <div class="container">
+         <div class="product-title">
+            <h1>Our Product</h1>
+            <a href="">View All <img src="{{URL::asset('assets/media/banner/arrow.png')}}" alt=""></a>
+
+         </div>
+      </div>
+      <div class="product-content">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-3">
+                  <div class="products">
+                     <img src="{{URL::asset('assets/media/products/p1.png')}}" alt="">
+                     <div class="product-bg">
+                        <img src="{{URL::asset('assets/media/products/p-gradient.png')}}" alt="">
+                     </div>
+                     <p>sarees</p>
+                  </div>
+               </div>
+               <div class="col-md-3">
+                  <div class="products">
+                     <img src="{{URL::asset('assets/media/products/p2.png')}}" alt="">
+                     <div class="product-bg">
+                        <img src="{{URL::asset('assets/media/products/p-gradient.png')}}" alt="">
+                     </div>
+                     <p>lehenga choli</p>
+                  </div>
+               </div>
+               <div class="col-md-3">
+                  <div class="products">
+                     <img src="{{URL::asset('assets/media/products/p3.png')}}" alt="">
+                     <div class="product-bg">
+                        <img src="{{URL::asset('assets/media/products/p-gradient.png')}}" alt="">
+                     </div>
+                     <p>salwar suit</p>
+                  </div>
+               </div>
+               <div class="col-md-3">
+                  <div class="products">
+                     <img src="{{URL::asset('assets/media/products/p4.png')}}" alt="">
+                     <div class="product-bg">
+                        <img src="{{URL::asset('assets/media/products/p-gradient.png')}}" alt="">
+                     </div>
+                     <p>indo-western</p>
+                  </div>
+               </div>
+            </div>
+
+         </div>
+      </div>
+</section>
+
+
+
+<!-- Arrival Section -->
+<section class="arrival-bg arrival-section">
+   <div class="">
+      <div class="container">
+         <div class="arrival-title">
+            <h1>New Arrivals</h1>
+            <a href="">View All <img src="{{URL::asset('assets/media/banner/arrow.png')}}" alt=""></a>
+
+         </div>
+      </div>
+      <div class="arrival-content">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-3">
+                  <div class="arrival-items">
+                     <div class="arrival-img">
+                        <img src="{{URL::asset('assets/media/products/a1.png')}}" alt="">
+
+                        <div class="a-bg">
+                           <img src="{{URL::asset('assets/media/products/ab1.png')}}" alt="">
+                        </div>
+                        <div class="a-buttons">
+                           <div class="btn-shows">
+                              <a href="">Most Bought</a>
+                           </div>
+                           <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M1.37187 9.59832C0.298865 6.24832 1.55287 2.41932 5.06987 1.28632C6.91987 0.689322 8.96187 1.04132 10.4999 2.19832C11.9549 1.07332 14.0719 0.693322 15.9199 1.28632C19.4369 2.41932 20.6989 6.24832 19.6269 9.59832C17.9569 14.9083 10.4999 18.9983 10.4999 18.9983C10.4999 18.9983 3.09787 14.9703 1.37187 9.59832Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M14.5 4.70001C15.57 5.04601 16.326 6.00101 16.417 7.12201" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                           </svg>
+
+                        </div>
+                     </div>
+
+                     <div class="arrival-price">
+                        <p>Kanjivaram Pattu Silk Saree</p>
+                        <div class="price-sec">
+                           <span class="price">₹600</span> <span class="delPrice"><del>1200</del></span><span class="offer-tag">50% OFF</span>
+                        </div>
+                     </div>
+                     <div class="cart-btn-show">
+                        <a href="">Add to Cart</a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-3">
+                  <div class="arrival-items">
+                     <div class="arrival-img">
+                        <img src="{{URL::asset('assets/media/products/a1.png')}}" alt="">
+
+                        <div class="a-bg">
+                           <img src="{{URL::asset('assets/media/products/ab1.png')}}" alt="">
+                        </div>
+                        <div class="a-buttons">
+                           <div class="btn-shows">
+                              <a href="">Most Bought</a>
+                           </div>
+                           <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M1.37187 9.59832C0.298865 6.24832 1.55287 2.41932 5.06987 1.28632C6.91987 0.689322 8.96187 1.04132 10.4999 2.19832C11.9549 1.07332 14.0719 0.693322 15.9199 1.28632C19.4369 2.41932 20.6989 6.24832 19.6269 9.59832C17.9569 14.9083 10.4999 18.9983 10.4999 18.9983C10.4999 18.9983 3.09787 14.9703 1.37187 9.59832Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M14.5 4.70001C15.57 5.04601 16.326 6.00101 16.417 7.12201" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                           </svg>
+
+                        </div>
+                     </div>
+
+                     <div class="arrival-price">
+                        <p>Kanjivaram Pattu Silk Saree</p>
+                        <div class="price-sec">
+                           <span class="price">₹600</span> <span class="delPrice"><del>1200</del></span><span class="offer-tag">50% OFF</span>
+                        </div>
+                     </div>
+                     <div class="cart-btn-show">
+                        <a href="">Add to Cart</a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-3">
+                  <div class="arrival-items">
+                     <div class="arrival-img">
+                        <img src="{{URL::asset('assets/media/products/a1.png')}}" alt="">
+
+                        <div class="a-bg">
+                           <img src="{{URL::asset('assets/media/products/ab1.png')}}" alt="">
+                        </div>
+                        <div class="a-buttons">
+                           <div class="btn-shows">
+                              <a href="">Most Bought</a>
+                           </div>
+                           <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M1.37187 9.59832C0.298865 6.24832 1.55287 2.41932 5.06987 1.28632C6.91987 0.689322 8.96187 1.04132 10.4999 2.19832C11.9549 1.07332 14.0719 0.693322 15.9199 1.28632C19.4369 2.41932 20.6989 6.24832 19.6269 9.59832C17.9569 14.9083 10.4999 18.9983 10.4999 18.9983C10.4999 18.9983 3.09787 14.9703 1.37187 9.59832Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M14.5 4.70001C15.57 5.04601 16.326 6.00101 16.417 7.12201" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                           </svg>
+
+                        </div>
+                     </div>
+
+                     <div class="arrival-price">
+                        <p>Kanjivaram Pattu Silk Saree</p>
+                        <div class="price-sec">
+                           <span class="price">₹600</span> <span class="delPrice"><del>1200</del></span><span class="offer-tag">50% OFF</span>
+                        </div>
+                     </div>
+                     <div class="cart-btn-show">
+                        <a href="">Add to Cart</a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-3">
+                  <div class="arrival-items">
+                     <div class="arrival-img">
+                        <img src="{{URL::asset('assets/media/products/a1.png')}}" alt="">
+
+                        <div class="a-bg">
+                           <img src="{{URL::asset('assets/media/products/ab1.png')}}" alt="">
+                        </div>
+                        <div class="a-buttons">
+                           <div class="btn-shows">
+                              <a href="">Most Bought</a>
+                           </div>
+                           <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M1.37187 9.59832C0.298865 6.24832 1.55287 2.41932 5.06987 1.28632C6.91987 0.689322 8.96187 1.04132 10.4999 2.19832C11.9549 1.07332 14.0719 0.693322 15.9199 1.28632C19.4369 2.41932 20.6989 6.24832 19.6269 9.59832C17.9569 14.9083 10.4999 18.9983 10.4999 18.9983C10.4999 18.9983 3.09787 14.9703 1.37187 9.59832Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M14.5 4.70001C15.57 5.04601 16.326 6.00101 16.417 7.12201" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                           </svg>
+
+                        </div>
+                     </div>
+
+                     <div class="arrival-price">
+                        <p>Kanjivaram Pattu Silk Saree</p>
+                        <div class="price-sec">
+                           <span class="price">₹600</span> <span class="delPrice"><del>1200</del></span><span class="offer-tag">50% OFF</span>
+                        </div>
+                     </div>
+                     <div class="cart-btn-show">
+                        <a href="">Add to Cart</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+         </div>
+      </div>
+</section>
+
+<!-- Showcase Section -->
+
+<section>
+   <div class="showcase-section">
+      <div class="container show-box">
+         <div class="row">
+            <div class="col-md-7">
+               <div class="showImg">
+                  <div class="shows-img1">
+                     <img src="{{URL::asset('assets/media/products/s1.png')}}" alt="">
+                  </div>
+                  <div class="shows-img2">
+                     <img src="{{URL::asset('assets/media/products/s2.png')}}" alt="">
+                  </div>
+                  <div class="shows-img3">
+                     <img src="{{URL::asset('assets/media/products/s3.png')}}" alt="">
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-5">
+               <div class="show-content">
+                  <p>Fabulous Blue and Grey Silk Fabric Embroidered Lehenga Choli</p>
+                  <a href="" class="show-Btn">Shop Now</a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+
+<!-- Collection Section -->
+
+<section class="collection-sec">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-12">
+            <div class="c-title">
+               <div class="arrival-title">
+                  <h1>Collections</h1>
+                  <a href="">View All <img src="{{URL::asset('assets/media/banner/arrow.png')}}" alt=""></a>
+
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-md-6">
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="c-image">
+                     <img src="{{URL::asset('assets/media/products/c1.png')}}" alt="">
+                     <div class="c-bg"></div>
+                     <div class="c-content">
+                        <p>Women Sarees</p>
+                        <h2>Collection</h2>
+                        <button>Shop Now</button>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="c-image">
+                     <img src="{{URL::asset('assets/media/products/c1.png')}}" alt="">
+                     <div class="c-bg"></div>
+                     <div class="c-content">
+                        <p>Women Sarees</p>
+                        <h2>Collection</h2>
+                        <button>Shop Now</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12 c-full">
+                  <div class="c-image">
+                     <img src="{{URL::asset('assets/media/products/c1.png')}}" alt="">
+                     <div class="c-bg"></div>
+                     <div class="c-content">
+                        <p>Women Sarees</p>
+                        <h2>Collection</h2>
+                        <button>Shop Now</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-6">
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="c-image">
+                     <img src="{{URL::asset('assets/media/products/c1.png')}}" alt="">
+                     <div class="c-bg"></div>
+                     <div class="c-button">
+                       
+                           <svg width="11" height="15" viewBox="0 0 11 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M0 13.9635V1.03649C0 0.205807 0.954138 -0.262712 1.61145 0.24521L9.97598 6.70871C10.4941 7.10904 10.4941 7.89096 9.97598 8.29129L1.61145 14.7548C0.954137 15.2627 0 14.7942 0 13.9635Z" fill="white" />
+                           </svg>
+
+                        
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="c-image">
+                     <img src="{{URL::asset('assets/media/products/c1.png')}}" alt="">
+                     <div class="c-bg"></div>
+                     <div class="c-button">
+                     <svg width="11" height="15" viewBox="0 0 11 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M0 13.9635V1.03649C0 0.205807 0.954138 -0.262712 1.61145 0.24521L9.97598 6.70871C10.4941 7.10904 10.4941 7.89096 9.97598 8.29129L1.61145 14.7548C0.954137 15.2627 0 14.7942 0 13.9635Z" fill="white" />
+                           </svg>
+
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12 c-full">
+                  <div class="c-image">
+                     <img src="{{URL::asset('assets/media/products/c1.png')}}" alt="">
+                     <div class="c-bg"></div>
+                     <div class="c-button">
+                     <svg width="11" height="15" viewBox="0 0 11 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M0 13.9635V1.03649C0 0.205807 0.954138 -0.262712 1.61145 0.24521L9.97598 6.70871C10.4941 7.10904 10.4941 7.89096 9.97598 8.29129L1.61145 14.7548C0.954137 15.2627 0 14.7942 0 13.9635Z" fill="white" />
+                           </svg>
+
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+
 {{-- <section class="featuredcat-section commontop-section mobhide">
     <div class="container">
        <div class="row">
