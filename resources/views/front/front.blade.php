@@ -464,8 +464,68 @@ $array = [];
    </div>
 </div>
 <!--mobile category ends---->
-@endforeach
-@endif
+
+ @endforeach
+ @endif
+<div class="row">
+<div id="renderproduct">
+ <ul id="MixItUp2F266B">
+   @php $wishlist = []; @endphp
+   @if (Auth::check())
+       @php $wishlist = explode(',', Auth::user()->wishlist); @endphp
+   @endif
+
+   @forelse($trending as $productList)
+       <li class="mix color-1 check1 radio2 option3 col-md-3 col-sm-4 col-xs-6 nopad" style="display: inline-block;">
+           <div class="prd-single">
+               <div class="prd-inner">
+                   <div class="prd-img">
+                       <a href="{{ route('product.item', ['slug' => $productList->slug]) }}">
+                           <img src="{{ URL::asset('/assets/media/products/' . $productList->image1) }}" class="img-responsive" alt="{{ $productList->product_title }}">
+                       </a>
+                   </div>
+                   <div class="prdbtn-wraper">
+                     <ul class="list-inline fail" id="MixItUp725DA6">
+                         <li><a href="" data-id="{{$productList->id}}" data-q="{{$productList->minquantity}}"
+                                 class="cart-btn common-btn btn-cart2 {{($productList->soldout != 'off')?'p-e-none':''}}"
+                                 data-toggle="tooltip" data-placement="top" title="{{($productList->soldout != 'off')?'soldout':'Add to Cart'}}">{{($productList->soldout != 'off')?'soldout':'Add to Cart'}}</a></li>
+                          @if(Auth::check())
+                         <li><a href="" data-id="{{$productList->id}}"
+                                 class="wishlist-btn common-btn btn-wishlist {{(in_array($productList->id,$array)?'added':'')}}"
+                                 tabindex="0" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
+                                 <img class="img-responsive center-block"
+                                     src="{{URL::asset('assets/front/images/icons/wishlist.png')}}">
+                             </a></li>
+                             @else 
+                             <li><a href="{{route('front.loginBlade')}}" data-id="{{$productList->id}}"
+                                 class="wishlist-btn common-btn"
+                                 tabindex="0" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
+                                 <img class="img-responsive center-block"
+                                     src="{{URL::asset('assets/front/images/icons/wishlist.png')}}">
+                             </a></li>
+                             @endif
+ 
+                     </ul>
+                 </div>
+                   <div class="prdname">
+                       <a href="{{ route('product.item', ['slug' => $productList->slug]) }}" style="color: #560835;">{{ $productList->product_title }}</a>
+                   </div>
+                   <div class="detailsprice-wraper">
+                       <div class="prdprice-wraper">
+                           <span class="actual-price">{{ $store->currencysymbol() ? $store->currencysymbol() : 'Rs.' }} {{ $productList->getProductPrice()->price }}</span>
+                            {{--Discount or Original Price --}}
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </li>
+   @empty
+       <h2 style="text-align: center; margin-top: 40px;">No Product found</h2>
+   @endforelse
+</ul>
+</div>
+</div>
+
 
 
 @if(count($Homecat2)>0)
