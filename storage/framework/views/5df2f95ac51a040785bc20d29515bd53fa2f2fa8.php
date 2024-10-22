@@ -1,0 +1,184 @@
+
+<?php $__env->startSection('content'); ?>
+
+<section class="banner-section">
+    <div class="banner-inner">
+        <div class="homeslider">
+            <img src="<?php echo e(URL::asset('assets/media/banner/0slider1.jpg')); ?>" class="img-responsive" alt="slider1">
+            <div class="pagetitle-wraper">
+                <div class="container">
+                    <div class="pagetitle">My Cart</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="banner-breadcrumb">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="breadcrumb">
+                        <li><a href="<?php echo e(route('front.index')); ?>">Home</a></li>
+                        <li><a href="#">My Cart</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="myorder-section commonaccount-section orderstyle">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 profile-leftwraper cartfull mobpad0">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  profile-leftinner" style="min-height: auto;">
+                    <div class="profile-navbar mobhide">
+                        <ul class="list-inline">
+                            <li><a class="active" href="<?php echo e(route('view.cart')); ?>">My Cart</a></li>
+                            <li><a href="<?php echo e((Auth::user()?route('view.deliveryaddress'):route('front.loginBlade'))); ?>">Delivery Address</a></li>
+                            <li><a href="<?php echo e((Auth::user()?route('view.checkout'):route('front.loginBlade'))); ?>">Checkout</a></li>
+                            <li><a href="">Payment</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  changepwd-wraper nopad cartmob">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 cartitem-lits orderlist-wraper">
+                            <div class="row" id="Shippingcard">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 cartmobtitle deskhide">
+                                    <a href="<?php echo e(route('front.index')); ?>" class="mobback"><span class="fa fa-arrow-left"></span></a><h3><span>My Cart</span></h3>
+                                </div>
+                                <?php echo $__env->make('front.includes.shippingcart', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 profile-rightwraper mobpricedet" id="Cart_summery">
+                <?php echo $__env->make('front.includes.cart_summery0', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+            </div>
+        </div>
+    </div>
+
+</section>
+<?php $__env->stopSection(); ?>
+<?php $__env->startPush('script'); ?>
+<script>
+    $(document).ready(function(){
+       $(".select2").select2({
+       /*placeholder: "Category",*/
+       minimumResultsForSearch: -1
+       });
+       $("#editbtn").click(function(){
+       //alert();
+       $(".profileform").removeClass("displayform");
+       $(".profileform .form-control , .profileform .input-fields ").removeAttr("disabled");
+   });	
+   $("#cancelbtn").click(function(){
+       //alert();
+       $(".profileform").addClass("displayform");
+       $(".profileform .form-control , .profileform .input-fields ").attr("disabled");
+       
+   });
+});
+   
+       
+   </script>
+<script>
+    $('body').on('click', '.quantity-up', async function (t) {
+        t.preventDefault();
+            var spinner = $(this).parent(),
+            input = spinner.find('input[type="number"]'),
+            btnUp = spinner.find('.quantity-up'),
+            btnDown = spinner.find('.quantity-down'),
+            min = input.attr('min'),
+            max = input.attr('max'),
+            id = input.attr('pid'),
+            step = parseFloat(input.attr('step'));
+            var oldValue = parseFloat(input.val());
+               if (oldValue >= parseInt(max)) {
+                   var newVal = oldValue;
+               } else {
+                   var newVal = oldValue + step;
+                    $.ajax({
+                        method: "GET",
+                        url: "<?php echo e(route('user.add.card')); ?>",
+                        data: {
+                            quantity: newVal,
+                            id: id
+                        },
+                        success: function (data) {
+                            calculatedate(data);
+                            $('.dropdown-box').load("<?php echo e(route('user.render.card')); ?>");
+                            $('#Shippingcard').load("<?php echo e(route('user.rendershippig.cart')); ?>");
+                        },
+                        error: function (erroe) {
+            
+                        }
+                    });
+               }
+               spinner.find("input").val(newVal);
+               spinner.find("input").trigger("change");
+    });
+    $('body').on('click', '.quantity-down', async function (t) {
+        t.preventDefault();
+            var spinner = $(this).parent(),
+            input = spinner.find('input[type="number"]'),
+            btnUp = spinner.find('.quantity-up'),
+            btnDown = spinner.find('.quantity-down'),
+            min = input.attr('min'),
+            max = input.attr('max'),
+            id = input.attr('pid'),
+            step = parseFloat(input.attr('step'));
+            var oldValue = parseFloat(input.val());
+               if (oldValue <= parseFloat(min)) {
+                   var newVal = oldValue;
+               } else {
+                   var newVal = oldValue - step;
+               }
+               spinner.find("input").val(newVal);
+               spinner.find("input").trigger("change");
+        $.ajax({
+            method: "GET",
+            url: "<?php echo e(route('user.reducecard.card')); ?>",
+            data: {
+                quantity: newVal,
+                id: id
+            },
+            success: function (data) {
+                calculatedate(data);
+                $('.dropdown-box').load("<?php echo e(route('user.render.card')); ?>");
+                $('#Shippingcard').load("<?php echo e(route('user.rendershippig.cart')); ?>");
+            },
+            error: function (erroe) {
+
+            }
+        });
+    });
+    $('body').on('click', '.product-remove', function (t) {
+        t.preventDefault();
+        var url = "<?php echo e(route('user.remove.card')); ?>/" + $(this).data('id');
+        $.ajax({
+            method: "GET",
+            url: url,
+            success: function (data) {
+                calculatedate(data);
+                $('.dropdown-box').load("<?php echo e(route('user.render.card')); ?>");
+                $('#Shippingcard').load("<?php echo e(route('user.rendershippig.cart')); ?>");
+                toastr["success"]('Removed from Cart');
+            },
+            error: function (erroe) {
+
+            }
+        });
+    });
+
+    function calculatedate(data) {
+        if (data.totalPrice == 0) {
+            var url = "<?php echo e(route('front.getCategory')); ?>";
+            window.location.href = url;
+        }
+       $('#Cart_summery').load('<?php echo e(route('cart_summer0')); ?>');
+    }
+
+</script>
+<?php $__env->stopPush(); ?>
+
+<?php echo $__env->make('front.includes.container', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\witcreat_witcom\resources\views/front/cart.blade.php ENDPATH**/ ?>
