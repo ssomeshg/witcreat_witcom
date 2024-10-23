@@ -1,6 +1,6 @@
-@extends('layout.admin') 
+ 
 
-@section('content')  
+<?php $__env->startSection('content'); ?>  
                     <!--end::Header-->
                     <!--begin::Content-->
                     <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
@@ -16,7 +16,7 @@
                                         <!--end::Page Title-->
                                         <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                                             <li class="breadcrumb-item text-muted">
-                                                <a href="{{ route('admin-category') }}" class="text-muted">List of Categories</a>
+                                                <a href="<?php echo e(route('admin-category')); ?>" class="text-muted">List of Categories</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -50,15 +50,16 @@
                                                   <span aria-hidden="true">&times;</span>
                                                 </button>
                                             </div>
-                            <form method="POST" action="{{route('admin-category-update',$data->id)}}"  onsubmit="return validation();" enctype="multipart/form-data" id="formEdit">
-                                {{ csrf_field() }}
-                                <input type="hidden" name="id" id="id" value="{{ $data->id}}">
+                            <form method="POST" action="<?php echo e(route('admin-category-update',$data->id)); ?>"  onsubmit="return validation();" enctype="multipart/form-data" id="formEdit">
+                                <?php echo e(csrf_field()); ?>
+
+                                <input type="hidden" name="id" id="id" value="<?php echo e($data->id); ?>">
                                 <div class="card-body">
                                    <div class="form-group row">
                                         <label class="col-2 col-form-label">Category Name
                                         <span class="text-danger">*</span></label>
                                         <div class="col-3">
-                                            <input class="form-control" type="text" value="{{ $data->category_name != null ? $data->category_name : '' }}" id="category_name" name="category_name" required/>
+                                            <input class="form-control" type="text" value="<?php echo e($data->category_name != null ? $data->category_name : ''); ?>" id="category_name" name="category_name" required/>
                                         </div>
                                     </div>    
                                     <div class="form-group row">
@@ -66,15 +67,15 @@
                                          <span class="text-danger">*</span></label>
                                          <div class="col-3">
                                             <select class="form-control" id="parent_category_id" name="parent_category_id" >
-                                            <option value="0" {{($data->parent_category_id == 0)?'selected':''}}>Parent Category</option>
-                                            @foreach($category as $category)
-                                            <option value="{{$category->id}}" {{($data->parent_category_id==$category->id)?'selected':''}}>{{$category->category_name}}</option>
+                                            <option value="0" <?php echo e(($data->parent_category_id == 0)?'selected':''); ?>>Parent Category</option>
+                                            <?php $__currentLoopData = $category; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                            <option value="<?php echo e($category->id); ?>" <?php echo e(($data->parent_category_id==$category->id)?'selected':''); ?>><?php echo e($category->category_name); ?></option>
 
-                                            @foreach($category->subs as $subCategory)
-                                            <option value="{{$subCategory->id}}" {{($data->sub_category==$subCategory->id)?'selected':''}}>--{{$subCategory->category_name}}</option>
-                                            @endforeach
+                                            <?php $__currentLoopData = $category->subs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $subCategory): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                            <option value="<?php echo e($subCategory->id); ?>" <?php echo e(($data->sub_category==$subCategory->id)?'selected':''); ?>>--<?php echo e($subCategory->category_name); ?></option>
+                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
-                                            @endforeach
+                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                         </select>
                                          </div>
                                      </div>            
@@ -82,21 +83,21 @@
                                          <label class="col-2 col-form-label">Category URL
                                          <span class="text-danger">*</span></label>
                                          <div class="col-10">
-                                             <input class="form-control" type="text" value="{{ $data->Category_url != null ? $data->Category_url : '' }}" id="Category_url" name="Category_url" required/>
+                                             <input class="form-control" type="text" value="<?php echo e($data->Category_url != null ? $data->Category_url : ''); ?>" id="Category_url" name="Category_url" required/>
                                          </div>
                                      </div>            
                                     <div class="form-group row">
                                          <label class="col-2 col-form-label">HSN Code
                                          <span class="text-danger">*</span></label>
                                          <div class="col-10">
-                                             <input class="form-control" type="text" value="{{ $data->hns_code != null ? $data->hns_code : '' }}" id="hns_code" name="hns_code" />
+                                             <input class="form-control" type="text" value="<?php echo e($data->hns_code != null ? $data->hns_code : ''); ?>" id="hns_code" name="hns_code" />
                                          </div>
                                      </div>            
                                     <div class="form-group row">
                                          <label class="col-2 col-form-label">Description
                                          <span class="text-danger"></span></label>
                                          <div class="col-10">
-                                            <textarea name="short_description" id="kt-ckeditor-4">{{ $data->short_description != null ? $data->short_description : '' }}</textarea>
+                                            <textarea name="short_description" id="kt-ckeditor-4"><?php echo e($data->short_description != null ? $data->short_description : ''); ?></textarea>
                                             <div class="fv-plugins-message-container"></div>
                                          </div>
                                      </div>
@@ -105,9 +106,9 @@
                                          <span class="text-danger">*</span></label>
                                          <div class="col-3">
                                              <label for="style_1">
-                                                <img style="width:255px;border:2px dashed #222;height: 255px;" src="{{ URL::asset('assets/media/banner/'.$data->style_1) }}" id="image1">
+                                                <img style="width:255px;border:2px dashed #222;height: 255px;" src="<?php echo e(URL::asset('assets/media/banner/'.$data->style_1)); ?>" id="image1">
                                                 </label>
-                                            <input style="display: none" type="file"  accept="image/*" onchange="loadFile(event)" value="{{ $data->style_1 != null ? $data->style_1 : '' }}" id="style_1" name="style_1" >
+                                            <input style="display: none" type="file"  accept="image/*" onchange="loadFile(event)" value="<?php echo e($data->style_1 != null ? $data->style_1 : ''); ?>" id="style_1" name="style_1" >
                                             
                                         <span class="text-danger">Width:620px and Height:768px</span>
                                         </div>
@@ -118,12 +119,12 @@
                                          <span class="text-danger">*</span></label>
                                          <div class="col-3">
                                              <label for="category_banner">
-                                                @if($data->category_banner != null)
-                                                <img style="width:255px;border:2px dashed #222;height: 255px;" src="{{ URL::asset('assets/media/banner/'.$data->category_banner) }}">
-                                                <input type="hidden" name="category_banner" value="{{$data->category_banner}}">
-                                                @endif
+                                                <?php if($data->category_banner != null): ?>
+                                                <img style="width:255px;border:2px dashed #222;height: 255px;" src="<?php echo e(URL::asset('assets/media/banner/'.$data->category_banner)); ?>">
+                                                <input type="hidden" name="category_banner" value="<?php echo e($data->category_banner); ?>">
+                                                <?php endif; ?>
                                              </label>
-                                            <input style="display: none" type="file" class="upload_image"  accept="image/*" value="{{ $data->category_banner != null ? $data->category_banner : '' }}" id="category_banner">
+                                            <input style="display: none" type="file" class="upload_image"  accept="image/*" value="<?php echo e($data->category_banner != null ? $data->category_banner : ''); ?>" id="category_banner">
                                             <span class="text-danger">Width:600px and Height:370px</span>
                                         </div>
                                      </div>
@@ -133,9 +134,9 @@
                                          <span class="text-danger">*</span></label>
                                          <div class="col-3">
                                              <label for="style_3">
-                                                <img style="width:255px;border:2px dashed #222;height: 255px;" src="{{ URL::asset('assets/media/banner/'.$data->style_3) }}" id="image3">
+                                                <img style="width:255px;border:2px dashed #222;height: 255px;" src="<?php echo e(URL::asset('assets/media/banner/'.$data->style_3)); ?>" id="image3">
                                                 </label>
-                                            <input style="display: none" type="file"  accept="image/*" onchange="loadFile1(event)" value="{{ $data->style_1 != null ? $data->style_3 : '' }}" id="style_3" name="style_3">
+                                            <input style="display: none" type="file"  accept="image/*" onchange="loadFile1(event)" value="<?php echo e($data->style_1 != null ? $data->style_3 : ''); ?>" id="style_3" name="style_3">
                                             
                                         <span class="text-danger">Width:600px and Height:600px</span>
                                         </div>
@@ -147,39 +148,39 @@
                                          <div class="col-3">
                                              <label for="mobile_image">
                                             
-                                                <img src="{{ URL::asset('assets/media/banner/'.$data->mobile_image) }}" style="width:255px;border:2px dashed #222;height: 255px;">
-                                                <input type="hidden" name="mobile_image" value="{{$data->mobile_image}}">
+                                                <img src="<?php echo e(URL::asset('assets/media/banner/'.$data->mobile_image)); ?>" style="width:255px;border:2px dashed #222;height: 255px;">
+                                                <input type="hidden" name="mobile_image" value="<?php echo e($data->mobile_image); ?>">
                                                 
                                              </label>
-                                            <input type="file" style="display: none" accept="image/*" value="{{ $data->mobile_image != null ? $data->mobile_image : '' }}" id="mobile_image">
+                                            <input type="file" style="display: none" accept="image/*" value="<?php echo e($data->mobile_image != null ? $data->mobile_image : ''); ?>" id="mobile_image">
                                         </div>
                                      </div>            
                                     <div class="form-group row">
                                          <label class="col-2 col-form-label">Meta Title
                                          </label>
                                          <div class="col-10">
-                                             <input class="form-control" type="text" value="{{ $data->meta_title != null ? $data->meta_title : '' }}" id="meta_title" name="meta_title" />
+                                             <input class="form-control" type="text" value="<?php echo e($data->meta_title != null ? $data->meta_title : ''); ?>" id="meta_title" name="meta_title" />
                                          </div>
                                      </div>            
                                     <div class="form-group row">
                                          <label class="col-2 col-form-label">Meta Description
                                          </label>
                                          <div class="col-10">
-                                             <input class="form-control" type="text" value="{{ $data->meta_description != null ? $data->meta_description : '' }}" id="meta_description" name="meta_description" />
+                                             <input class="form-control" type="text" value="<?php echo e($data->meta_description != null ? $data->meta_description : ''); ?>" id="meta_description" name="meta_description" />
                                          </div>
                                      </div>            
                                     <div class="form-group row">
                                          <label class="col-2 col-form-label">Meta Keywords
                                          </label>
                                          <div class="col-10">
-                                             <input class="form-control" type="text" value="{{ $data->meta_keywords != null ? $data->meta_keywords : '' }}" id="meta_keywords" name="meta_keywords" />
+                                             <input class="form-control" type="text" value="<?php echo e($data->meta_keywords != null ? $data->meta_keywords : ''); ?>" id="meta_keywords" name="meta_keywords" />
                                          </div>
                                      </div>            
                                     <div class="form-group row">
                                          <label class="col-2 col-form-label">Sorting Order
                                          </label>
                                          <div class="col-10">
-                                             <input class="form-control" type="text" value="{{ $data->sort_order != null ? $data->sort_order : '' }}" id="sort_order" name="sort_order" />
+                                             <input class="form-control" type="text" value="<?php echo e($data->sort_order != null ? $data->sort_order : ''); ?>" id="sort_order" name="sort_order" />
                                          </div>
                                      </div>            
                                     <div class="form-group row">
@@ -187,7 +188,7 @@
                                          </label>
                                          <div class="col-10">
                                             <label class="checkbox checkbox-success">
-                                                <input type="checkbox" name="featured_category" value=1 {{ $data->featured_category == 1 ? 'checked' : '' }}/>
+                                                <input type="checkbox" name="featured_category" value=1 <?php echo e($data->featured_category == 1 ? 'checked' : ''); ?>/>
                                                 <span></span>
                                             </label>
                                          </div>
@@ -197,7 +198,7 @@
                                          </label>
                                          <div class="col-10">
                                             <label class="checkbox checkbox-success">
-                                                <input type="checkbox" name="featured_collection" value=1 {{ $data->featured_collection == 1 ? 'checked' : '' }}/>
+                                                <input type="checkbox" name="featured_collection" value=1 <?php echo e($data->featured_collection == 1 ? 'checked' : ''); ?>/>
                                                 <span></span>
                                             </label>
                                          </div>
@@ -224,8 +225,8 @@
 
                     <!--end::Content-->
                     <!--begin::Footer-->
- @endsection  
- @push('script')
+ <?php $__env->stopSection(); ?>  
+ <?php $__env->startPush('script'); ?>
      <script>
         $('#category_name').blur(function(){
             var str = $('#category_name').val();
@@ -273,9 +274,9 @@
               size: 'viewport'
             }).then(function(response){
                 $.ajax({
-                    url:"{{ route('admin-category-cropimage') }}",
+                    url:"<?php echo e(route('admin-category-cropimage')); ?>",
                     type: "POST",
-                    data:{id:id,table_colum:table_colum,"image": response,"_token": "{{ csrf_token() }}"},
+                    data:{id:id,table_colum:table_colum,"image": response,"_token": "<?php echo e(csrf_token()); ?>"},
                     success:function(data){  
                         $('#uploadimageModal').modal('hide');
                         objectB.children[0].children[1].value = data['Name'];
@@ -338,4 +339,5 @@
     reader.readAsDataURL(event.target.files[0]);
   };
 </script>
- @endpush                   
+ <?php $__env->stopPush(); ?>                   
+<?php echo $__env->make('layout.admin', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\witcreat_witcom\resources\views/admin/category/edit.blade.php ENDPATH**/ ?>
