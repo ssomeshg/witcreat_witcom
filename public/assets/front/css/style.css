@@ -314,16 +314,18 @@ section {
     color: #ffffff;
 }
 footer {
-    background-color: #522e43;
+    /* background-color: #522e43; */
     float: left;
     width: 100%;
 }
 .footer-title {
-    font-size: 20px;
+    font-size: 16px;
     margin-bottom: 15px;
+    font-weight: 600;
 }
 footer .container {
     padding: 0;
+    position: relative;
 }
 .footer-menu li {
     width: 100%;
@@ -332,10 +334,11 @@ footer .container {
     margin-top: 8px;
 }
 .footer-menu li a {
-    color: #7e7f84;
+    color: #ffffff;
     font-size: 14px;
-    text-transform: uppercase;
-    line-height: 22px;
+    /* text-transform: uppercase; */
+    line-height: 24px;
+    font-weight: 400;
     position: relative;
 }
 .footer-menu li a::after {
@@ -359,8 +362,8 @@ footer .container {
 }
 .social-links li a {
     color: #ffffff;
-    display: inline-block;
-    padding: 4px 0 0;
+    display: flex;
+    /* padding: 8px; */
     font-size: 21px;
     text-align: center;
     position: relative;
@@ -368,15 +371,104 @@ footer .container {
     z-index: 10;
     line-height: 34px;
     margin-right: 8px;
+    background-color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.social-links li a img{
+    width: 20px;
+    height: auto;
 }
 .footerinner-wraper {
-    padding: 45px 0 0;
+    margin: 200px 0 0 0;
+    padding: 130px 0px 22px 0px;
+    background-color: #432207;
+}
+.footer-bg{
+    background-image: url(../images/Mask-group.png);
+    background-repeat: no-repeat;
+    height: 300px;
+    position: relative;
+    background-size: cover;
+    padding: 34px 0px;
+}
+.footer-bg .container .footer-newsletter{
+    position: absolute;
+    /* bottom: 0px; */
+    /* left: 0; */
+    background-color: #EDE5DF;
+    width: 100%;
+    padding: 31px 100px;
+    top: 80px;
+    z-index: 90;
+    border-radius: 20px;
+}
+.footer-bg .container .footer-newsletter h3{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 28px;
+    margin-top: 0;
+    text-align: center;
+}
+.newsDiv{
+    background-color: #432207;
+    margin: 0px 50px;
+    padding: 30px;
+    display: flex;
+    border-radius: 20px;
+    gap: 10px;
+}
+.newsDiv input{
+    width: 100%;
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: none;
+}
+.newsDiv input:focus{
+    outline: none;
+}
+.newsDiv button{
+    display: flex;
+    min-width: max-content;
+    background-color: #694e39;
+    gap: 10px;
+    align-items: center;
+    color: #fff;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 10px;
 }
 .social-links {
     margin-bottom: 0;
+    display: flex;
+}
+.social-links li{
+    width: inherit;
+    margin-top: 0px !important;
 }
 .social-links li a:hover {
     color: #ff3e6c;
+}
+.f-terms{
+    display: flex;
+    margin: 0;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    align-items: center;
+    color: #F7F6F0;
+}
+.f-terms li{
+    width: inherit;
+    margin-top: 0px !important;
+}
+.f-terms li a{
+    min-width: max-content;
+    opacity: 0.5;
 }
 /*.social-links li a:after {
     background-color: #ff3e6c;
@@ -6104,7 +6196,7 @@ xcustom form elements
 
 .product-content .products img{
     width: 100%;
-    max-height: 360px;
+    min-height: 360px;
     object-fit: cover;
 
 }
@@ -6355,4 +6447,63 @@ xcustom form elements
 }
 .c-image img{
     width: 100%;
+}
+.our-shop{
+    margin: 80px 0px;
+}
+.fashion-left{
+    background: #432207;
+    border-top-left-radius: 200px;
+    position: relative;
+    margin: auto 0;
+    /* text-align: center; */
+    min-height: 640px;
+    display: flex;
+    /* height: 100%; */
+    width: 100%;
+    justify-content: center;
+}
+.fs-shop{
+    height: 150px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.fs-shop img{
+    height: 100%;
+}
+.fs-logo{
+    width: 260px;
+    height: 100%;
+    margin: auto;
+}
+.fashion-right h1{
+    font-size: 70px;
+    font-weight: 700;
+}
+.fashion-right p{
+    font-size: 21px;
+    font-weight: 400;
+}
+.fashion-counter{
+    background-color: #D2B79E;
+    padding: 10px 20px;
+    display: flex;
+    position: absolute;
+   justify-content: center;
+    width: 115%;
+    left: -80px;
+}
+.count-fashion{
+    border-right: 1px solid black;
+    text-align: center;
+    padding: 0px 40px;
+}
+.count-fashion h1{
+    font-size: 52px;
+    font-weight: 900;
+}
+.count-fashion p{
+    font-size: 21px;
+    font-weight: 400;
 }

@@ -19,7 +19,7 @@
             <div class="col-md-3 col-sm-3 col-xs-12 footer-inner footer-form pad-lft-15">
                   <div class="footerform-inner">
                      <div class="payment-sprite">
-                        <img src="{{URL::asset('assets/media/logo5.png')}}" alt="payment" style="max-width: 110px;">
+                        <img src="<?php echo e(URL::asset('assets/media/logo5.png')); ?>" alt="payment" style="max-width: 110px;">
                         <!--<span class="bg-payment1"></span>-->
                         <!--<span class="bg-payment2"></span>-->
                         <!--<span class="bg-payment3"></span>-->
@@ -47,21 +47,21 @@
                   <div class="col-md-3 col-sm-3 col-xs-12 footer-inner footer-menu">
                         <div class="footer-title text-uppercase text-white">Company</div>
                         <ul class="list-inline">
-                           <li><a href="{{route('front.about')}}">About</a></li>
-                           <li><a href="{{route('front.Careers')}}">Careers</a></li>
+                           <li><a href="<?php echo e(route('front.about')); ?>">About</a></li>
+                           <li><a href="<?php echo e(route('front.Careers')); ?>">Careers</a></li>
                            <li><a href="">Blog</a></li>
-                           <li><a href="{{route('front.Contact_Us')}}">Contact Us</a></li>
+                           <li><a href="<?php echo e(route('front.Contact_Us')); ?>">Contact Us</a></li>
                         </ul>
                      </div>
                      <div class="col-md-3 col-sm-3 col-xs-12 footer-inner footer-menu">
                         <div class="footer-title text-uppercase text-white">Policy</div>
                         <ul class="list-inline">
-                           <li><a href="{{route('front.Privacy_Policy')}}">Privacy Policy</a></li>
-                           <li><a href="{{route('front.Shipping_Policy')}}">Shipping Policy</a></li>
-                           <li><a href="{{route('front.TermsConditions')}}">Terms & Conditions</a></li>
-                           <li><a href="{{route('front.returnandcancle')}}">Returns, Exchange & Cancellation</a></li>
-                           <li><a href="{{route('front.CustomsTaxes')}}">Duties, Customs & Taxes</a></li>
-                           <li><a href="{{route('front.Disclaimer')}}">Disclaimer</a></li>
+                           <li><a href="<?php echo e(route('front.Privacy_Policy')); ?>">Privacy Policy</a></li>
+                           <li><a href="<?php echo e(route('front.Shipping_Policy')); ?>">Shipping Policy</a></li>
+                           <li><a href="<?php echo e(route('front.TermsConditions')); ?>">Terms & Conditions</a></li>
+                           <li><a href="<?php echo e(route('front.returnandcancle')); ?>">Returns, Exchange & Cancellation</a></li>
+                           <li><a href="<?php echo e(route('front.CustomsTaxes')); ?>">Duties, Customs & Taxes</a></li>
+                           <li><a href="<?php echo e(route('front.Disclaimer')); ?>">Disclaimer</a></li>
                         </ul>
                      </div>
                     
@@ -70,22 +70,22 @@
                         <div class="row pad-lft-15">
                            <div class="col-md-12 col-sm-12 col-xs-12 follow-us">
                               <ul class="list-inline social-links">
-                                 <li><a target="_blank" href="https://www.facebook.com/silkastic"><img src="{{URL::asset('assets/media/fb.png')}}" alt=""></a></li>
-                                 <li><a target="_blank" href="#"><img src="{{URL::asset('assets/media/yt.png')}}" alt=""></a></li>
-                                 <li><a target="_blank" href="https://www.instagram.com/silkastic/"><img src="{{URL::asset('assets/media/insta.png')}}" alt=""></a></li>
+                                 <li><a target="_blank" href="https://www.facebook.com/silkastic"><img src="<?php echo e(URL::asset('assets/media/fb.png')); ?>" alt=""></a></li>
+                                 <li><a target="_blank" href="#"><img src="<?php echo e(URL::asset('assets/media/yt.png')); ?>" alt=""></a></li>
+                                 <li><a target="_blank" href="https://www.instagram.com/silkastic/"><img src="<?php echo e(URL::asset('assets/media/insta.png')); ?>" alt=""></a></li>
                               </ul>
                            </div>
                         </div>
                         <ul class="f-terms">
-                        <li><a href="{{route('front.Disclaimer')}}">Disclaimer</a></li>
-                        <li><a href="{{route('front.Privacy_Policy')}}">Privacy Policy</a></li>
-                        <li><a href="{{route('front.TermsConditions')}}">Terms & Conditions</a></li>
+                        <li><a href="<?php echo e(route('front.Disclaimer')); ?>">Disclaimer</a></li>
+                        <li><a href="<?php echo e(route('front.Privacy_Policy')); ?>">Privacy Policy</a></li>
+                        <li><a href="<?php echo e(route('front.TermsConditions')); ?>">Terms & Conditions</a></li>
                         </ul>
                         <!-- <ul class="list-inline">
-                           <li><a href="{{route('front.FAQ')}}">FAQ</a></li>
-                           <li><a href="{{(Auth::check())?route('view.order'):route('front.loginBlade')}}">Track Order</a></li>
-                           <li><a href="{{route('front.Vendor')}}">Become an Vendor</a></li>
-                           <li><a target="_blank" href="{{route('admin.login')}}">Vendor Login</a></li>
+                           <li><a href="<?php echo e(route('front.FAQ')); ?>">FAQ</a></li>
+                           <li><a href="<?php echo e((Auth::check())?route('view.order'):route('front.loginBlade')); ?>">Track Order</a></li>
+                           <li><a href="<?php echo e(route('front.Vendor')); ?>">Become an Vendor</a></li>
+                           <li><a target="_blank" href="<?php echo e(route('admin.login')); ?>">Vendor Login</a></li>
                         </ul> -->
                      
                        
@@ -115,4 +115,4 @@
          </script>. All Rights Reserved
       </div>
    </div> -->
-</footer>
+</footer><?php /**PATH C:\xampp\htdocs\witcreat_witecom\resources\views/front/includes/footer.blade.php ENDPATH**/ ?>
