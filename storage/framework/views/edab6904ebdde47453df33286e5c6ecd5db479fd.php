@@ -219,7 +219,7 @@ $array = [];
    <div class="showcase-section">
       <div class="container show-box">
          <div class="row">
-            <div class="col-md-7">
+            <div class="col-md-7 col-12">
                <div class="showImg">
                   <div class="shows-img1">
                      <img src="<?php echo e(URL::asset('assets/media/products/s1.png')); ?>" alt="">
@@ -232,7 +232,7 @@ $array = [];
                   </div>
                </div>
             </div>
-            <div class="col-md-5">
+            <div class="col-md-5 col-12">
                <div class="show-content">
                   <p>Fabulous Blue and Grey Silk Fabric Embroidered Lehenga Choli</p>
                   <a href="" class="show-Btn">Shop Now</a>
@@ -261,7 +261,7 @@ $array = [];
       </div>
       <div class="row">
          <div class="col-md-6">
-            <div class="row">
+            <div class="row c-items">
                <div class="col-md-6">
                   <div class="c-image">
                      <img src="<?php echo e(URL::asset('assets/media/products/c1.png')); ?>" alt="">
@@ -300,7 +300,7 @@ $array = [];
             </div>
          </div>
          <div class="col-md-6">
-            <div class="row">
+            <div class="row c-items">
                <div class="col-md-6">
                   <div class="c-image">
                      <img src="<?php echo e(URL::asset('assets/media/products/c1.png')); ?>" alt="">
