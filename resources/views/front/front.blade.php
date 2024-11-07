@@ -111,9 +111,12 @@ $array = [];
                <div class="col-md-3">
                   <div class="products">
                      <a
-                        href="{{ route('front.getCategory', ['category' => $category->Category_url]) }}">
+                        href="{{ route('front.getCategory', ['category' => $category->Category_url]) }}" class="overlay-wrap">
                         <img src="{{ URL::asset('assets/media/banner/' . $category->style_1) }}"
                            alt="">
+                           <div class="gradient-overlay">
+                              <span class="plus-icon"></span>
+                           </div>
                         <div class="product-bg">
                            <img src="{{ URL::asset('assets/media/products/p-gradient.png') }}"
                               alt="">
@@ -155,7 +158,7 @@ $array = [];
                @forelse($trending as $productList)
                <div class="col-md-3">
                   <div class="arrival-items">
-                     <div class="arrival-img">
+                     <div class="arrival-img prd-img">
                         <img src="{{ URL::asset('assets/media/products/a1.png') }}" alt="">
 
                         <div class="a-bg">
@@ -168,6 +171,9 @@ $array = [];
                            <div class="btn-shows">
                               <a href="">Most Bought</a>
                            </div>
+                           <a href="{{route('front.loginBlade')}}" data-id="{{$productList->id}}"
+                              class=" common-btn"
+                              tabindex="0" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
                               xmlns="http://www.w3.org/2000/svg">
                               <path fill-rule="evenodd" clip-rule="evenodd"
@@ -178,7 +184,7 @@ $array = [];
                                  stroke="white" stroke-width="1.5" stroke-linecap="round"
                                  stroke-linejoin="round" />
                            </svg>
-
+                        </a>
                         </div>
                      </div>
 
@@ -384,6 +390,90 @@ $array = [];
    </div>
 </section>
 <!-- Our Shop End -->
+<div class="testimonial-section">
+   <h2 style="color:black;">What People Say About Us</h2>
+   <div class="testimonial-slider">
+       <div class="testimonial-card"> 
+           <p class="testimonial-text">Amet minim mollit non deserunt ullamco </p>
+           <div class="testimonial-author">
+            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+               <img src="{{asset('assets/front/images/t1.png')}}" alt="Customer Image">
+               <p>Anisa zahra</p>
+               <span>Customer</span>
+           </div>
+       </div>
+       <div class="testimonial-card"> 
+         <p class="testimonial-text">Amet minim mollit non deserunt ullamco </p>
+         <div class="testimonial-author">
+          <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+             <img src="{{asset('assets/front/images/t2.png')}}" alt="Customer Image">
+             <p>Anisa zahra</p>
+             <span>Customer</span>
+         </div>
+     </div>
+     <div class="testimonial-card"> 
+      <p class="testimonial-text">Amet minim mollit non deserunt ullamco </p>
+      <div class="testimonial-author">
+       <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+          <img src="{{asset('assets/front/images/t1.png')}}" alt="Customer Image">
+          <p>Anisa zahra</p>
+          <span>Customer</span>
+      </div>
+  </div>
+       <!-- Second row of testimonials -->
+       <div class="testimonial-card"> 
+         <p class="testimonial-text">Amet minim mollit non deserunt ullamco </p>
+         <div class="testimonial-author">
+          <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+             <img src="{{asset('assets/front/images/t2.png')}}" alt="Customer Image">
+             <p>Anisa zahra</p>
+             <span>Customer</span>
+         </div>
+     </div>
+     <div class="testimonial-card"> 
+      <p class="testimonial-text">Amet minim mollit non deserunt ullamco </p>
+      <div class="testimonial-author">
+       <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+          <img src="{{asset('assets/front/images/t1.png')}}" alt="Customer Image">
+          <p>Anisa zahra</p>
+          <span>Customer</span>
+      </div>
+  </div>
+  <div class="testimonial-card"> 
+   <p class="testimonial-text">Amet minim mollit non deserunt ullamco </p>
+   <div class="testimonial-author">
+    <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+       <img src="{{asset('assets/front/images/t2.png')}}" alt="Customer Image">
+       <p>Anisa zahra</p>
+       <span>Customer</span>
+   </div>
+</div>
+   </div>
+   <div class="slider-navigation">
+       <span class="nav-dot active" data-slide="0"></span>
+       <span class="nav-dot" data-slide="1"></span>
+   </div>
+</div>
+
+<script>
+   const slider = document.querySelector('.testimonial-slider');
+   const dots = document.querySelectorAll('.nav-dot');
+
+   let currentSlide = 0;
+
+   function updateSlider(index) {
+       const offset = -index * 100 / dots.length;
+       slider.style.transform = `translateX(${offset}%)`;
+       dots.forEach(dot => dot.classList.remove('active'));
+       dots[index].classList.add('active');
+       currentSlide = index;
+   }
+
+   // Add click event to each dot
+   dots.forEach((dot, index) => {
+       dot.addEventListener('click', () => updateSlider(index));
+   });
+</script>
 
 {{-- <section class="featuredcat-section commontop-section mobhide">
     <div class="container">
@@ -825,7 +915,7 @@ $array = [];
 
 
 
-                        @if (count($Homecat2) > 0)
+                        {{-- @if (count($Homecat2) > 0)
                         @foreach ($Homecat2 as $Home2)
                         <section class="featured-section commontop-section">
                            <div class="container">
@@ -978,9 +1068,9 @@ $array = [];
                            </div>
                         </section>
                         @endforeach
-                        @endif
+                        @endif --}}
 
-                        @if (count($homeProduct) > 0)
+                        {{-- @if (count($homeProduct) > 0)
                         @foreach ($homeProduct as $homeProducts)
                         <section class="trend-section commontop-section hometrend">
                            <div class="container">
@@ -1048,7 +1138,7 @@ $array = [];
                                                    </div>
                                                 </div>
                                                 {{-- @if ($data->isoffer) --}}
-                                                <div class="detailsprice-wraper">
+                                                {{-- <div class="detailsprice-wraper">
                                                    <div class="prdprice-wraper">
                                                       <span
                                                          class="actual-price">{{ $StoreConfig->currencysymbol() ? $StoreConfig->currencysymbol() : 'Rs.' }}
@@ -1072,14 +1162,14 @@ $array = [];
                                                       </span>
                                                       @endif
                                                    </div>
-                                                </div>
+                                                </div> --}}
                                                 {{-- @else
                     <div class="detailsprice-wraper">
                        <div class="prdprice-wraper">
                           <span class="actual-price">{{($StoreConfig->currencysymbol())?$StoreConfig->currencysymbol():'Rs.'}} {{ $data->price }}</span>
                                              </div>
                                           </div>
-                                          @endif --}}
+                                          @endif 
                                        </div>
                                     </div>
                                  </div>
@@ -1090,8 +1180,8 @@ $array = [];
                   </div>
                   </section>
                   @endforeach
-                  @endif
-                  <section class="shopbyprice-section commontop-section">
+                  @endif --}}
+                  {{-- <section class="shopbyprice-section commontop-section">
                      <div class="container">
                         <div class="row">
                            <div class="col-md-12 col-sm-12 col-xs-12 text-center text-uppercase section-title middle-liner">
@@ -1437,7 +1527,7 @@ $array = [];
                            </div>
                         </div>
                      </div>
-                  </section>
+                  </section> --}}
                   @endsection
                   @push('script')
                   <script type="text/javascript">
