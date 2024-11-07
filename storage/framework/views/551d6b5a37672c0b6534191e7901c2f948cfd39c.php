@@ -1,5 +1,6 @@
 <footer>
    <div class="footer-bg">
+
       <div class="container">
          <div class="footer-newsletter">
             <h3>News Letter</h3>
@@ -16,7 +17,7 @@
       <div class="col-md-12 col-sm-12 col-xs-12 nopad footerinner-wraper">
          <div class="container">
             <div class="row footer-top mobrow-0">
-            <div class="col-md-3 col-sm-3 col-xs-12 footer-inner footer-form pad-lft-15">
+               <div class="col-md-3 col-sm-3 col-xs-12 footer-inner footer-form pad-lft-15">
                   <div class="footerform-inner">
                      <div class="payment-sprite">
                         <img src="<?php echo e(URL::asset('assets/media/logo5.png')); ?>" alt="payment" style="max-width: 110px;">
@@ -44,7 +45,7 @@
                </div>
                <div class="col-md-9 col-sm-9 col-xs-12">
                   <div class="row mobileres">
-                  <div class="col-md-3 col-sm-3 col-xs-12 footer-inner footer-menu">
+                     <div class="col-md-3 col-sm-3 col-xs-12 footer-inner footer-menu">
                         <div class="footer-title text-uppercase text-white">Company</div>
                         <ul class="list-inline">
                            <li><a href="<?php echo e(route('front.about')); ?>">About</a></li>
@@ -64,7 +65,7 @@
                            <li><a href="<?php echo e(route('front.Disclaimer')); ?>">Disclaimer</a></li>
                         </ul>
                      </div>
-                    
+
                      <div class="col-md-6 col-sm-6 col-xs-12 footer-inner footer-menu">
                         <div class="footer-title text-uppercase text-white">Follow us</div>
                         <div class="row pad-lft-15">
@@ -77,9 +78,9 @@
                            </div>
                         </div>
                         <ul class="f-terms">
-                        <li><a href="<?php echo e(route('front.Disclaimer')); ?>">Disclaimer</a></li>
-                        <li><a href="<?php echo e(route('front.Privacy_Policy')); ?>">Privacy Policy</a></li>
-                        <li><a href="<?php echo e(route('front.TermsConditions')); ?>">Terms & Conditions</a></li>
+                           <li><a href="<?php echo e(route('front.Disclaimer')); ?>">Disclaimer</a></li>
+                           <li><a href="<?php echo e(route('front.Privacy_Policy')); ?>">Privacy Policy</a></li>
+                           <li><a href="<?php echo e(route('front.TermsConditions')); ?>">Terms & Conditions</a></li>
                         </ul>
                         <!-- <ul class="list-inline">
                            <li><a href="<?php echo e(route('front.FAQ')); ?>">FAQ</a></li>
@@ -87,8 +88,8 @@
                            <li><a href="<?php echo e(route('front.Vendor')); ?>">Become an Vendor</a></li>
                            <li><a target="_blank" href="<?php echo e(route('admin.login')); ?>">Vendor Login</a></li>
                         </ul> -->
-                     
-                       
+
+
                      </div>
                   </div>
                   <!--<div class="row pad-lft-15">-->
@@ -102,9 +103,13 @@
                   <!--   </div>-->
                   <!--</div>-->
                </div>
-              
+
             </div>
          </div>
+         <img src="<?php echo e(URL::asset('assets/media/f-left.png')); ?>" id="f-a1" alt="start" style="position: absolute;bottom: 20px;width: 100px;">
+         <img src="<?php echo e(URL::asset('assets/media/f-right.png')); ?>" id="f-a2" alt="start" style="position: absolute;top: 30px;right: 0;width: 100px;">
+         <img src="<?php echo e(URL::asset('assets/media/f-star.png')); ?>" id="f-a3" alt="start" style=" position: absolute;top: 60px;left: 100px;width: 30px;">
+         <img src="<?php echo e(URL::asset('assets/media/f-star.png')); ?>" id="f-a4" alt="start" style="       position: absolute;bottom: 70px;right: 40px;width: 30px;">
       </div>
    </div>
 

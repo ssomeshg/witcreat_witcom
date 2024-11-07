@@ -105,21 +105,19 @@ $array = [];
       </div>
       <div class="product-content">
          <div class="container">
+            <!-- Add 'slider' class here to initialize slick -->
             <div class="row">
                @foreach (array_slice($Home['category'], 0, 4) as $category)
                <!-- Limit to 4 categories -->
                <div class="col-md-3">
                   <div class="products">
-                     <a
-                        href="{{ route('front.getCategory', ['category' => $category->Category_url]) }}" class="overlay-wrap">
-                        <img src="{{ URL::asset('assets/media/banner/' . $category->style_1) }}"
-                           alt="">
-                           <div class="gradient-overlay">
-                              <span class="plus-icon"></span>
-                           </div>
+                     <a href="{{ route('front.getCategory', ['category' => $category->Category_url]) }}" class="overlay-wrap">
+                        <img src="{{ URL::asset('assets/media/banner/' . $category->style_1) }}" alt="">
+                        <div class="gradient-overlay">
+                           <span class="plus-icon"></span>
+                        </div>
                         <div class="product-bg">
-                           <img src="{{ URL::asset('assets/media/products/p-gradient.png') }}"
-                              alt="">
+                           <img src="{{ URL::asset('assets/media/products/p-gradient.png') }}" alt="">
                         </div>
                         <p>{{ $category->category_name }}</p>
                      </a>
@@ -131,9 +129,47 @@ $array = [];
       </div>
    </div>
 </section>
+
 @endforeach
 @endif
-
+<script>
+   $('.productSlider').slick({
+      dots: false,
+      infinite: true,
+      speed: 300,
+      arrows: true,
+      prevArrow: '<i class="flaticon-left-chevron btn-left"></i>',
+      nextArrow: '<i class="flaticon-right-chevron btn-right"></i>',
+      autoplay: false,
+      slidesToShow: 4, // Default for desktop
+      slidesToScroll: 1,
+      responsive: [
+         {
+            breakpoint: 1024, // Tablet and below: 3 items
+            settings: {
+               slidesToShow: 3,
+               slidesToScroll: 1,
+               infinite: true,
+               dots: false
+            }
+         },
+         {
+            breakpoint: 768, // Mobile landscape and below: 2 items
+            settings: {
+               slidesToShow: 2,
+               slidesToScroll: 1
+            }
+         },
+         {
+            breakpoint: 480, // Mobile portrait and below: 1 item
+            settings: {
+               slidesToShow: 1,
+               slidesToScroll: 1
+            }
+         }
+      ]
+   });
+</script>
 
 
 <!-- Arrival Section -->
