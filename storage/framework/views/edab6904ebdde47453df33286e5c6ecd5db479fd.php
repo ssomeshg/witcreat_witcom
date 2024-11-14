@@ -104,8 +104,8 @@ $array = [];
       <div class="product-content">
          <div class="container">
             <!-- Add 'slider' class here to initialize slick -->
-            <div class="row">
-               <?php $__currentLoopData = array_slice($Home['category'], 0, 4); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <div class="row product-slider">
+               <?php $__currentLoopData = array_slice($Home['category'], 0, 6); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                <!-- Limit to 4 categories -->
                <div class="col-md-3">
                   <div class="products">
@@ -130,44 +130,7 @@ $array = [];
 
 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 <?php endif; ?>
-<script>
-   $('.productSlider').slick({
-      dots: false,
-      infinite: true,
-      speed: 300,
-      arrows: true,
-      prevArrow: '<i class="flaticon-left-chevron btn-left"></i>',
-      nextArrow: '<i class="flaticon-right-chevron btn-right"></i>',
-      autoplay: false,
-      slidesToShow: 4, // Default for desktop
-      slidesToScroll: 1,
-      responsive: [
-         {
-            breakpoint: 1024, // Tablet and below: 3 items
-            settings: {
-               slidesToShow: 3,
-               slidesToScroll: 1,
-               infinite: true,
-               dots: false
-            }
-         },
-         {
-            breakpoint: 768, // Mobile landscape and below: 2 items
-            settings: {
-               slidesToShow: 2,
-               slidesToScroll: 1
-            }
-         },
-         {
-            breakpoint: 480, // Mobile portrait and below: 1 item
-            settings: {
-               slidesToShow: 1,
-               slidesToScroll: 1
-            }
-         }
-      ]
-   });
-</script>
+
 
 
 <!-- Arrival Section -->

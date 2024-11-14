@@ -106,8 +106,8 @@ $array = [];
       <div class="product-content">
          <div class="container">
             <!-- Add 'slider' class here to initialize slick -->
-            <div class="row">
-               @foreach (array_slice($Home['category'], 0, 4) as $category)
+            <div class="row product-slider">
+               @foreach (array_slice($Home['category'], 0, 6) as $category)
                <!-- Limit to 4 categories -->
                <div class="col-md-3">
                   <div class="products">
@@ -132,44 +132,7 @@ $array = [];
 
 @endforeach
 @endif
-<script>
-   $('.productSlider').slick({
-      dots: false,
-      infinite: true,
-      speed: 300,
-      arrows: true,
-      prevArrow: '<i class="flaticon-left-chevron btn-left"></i>',
-      nextArrow: '<i class="flaticon-right-chevron btn-right"></i>',
-      autoplay: false,
-      slidesToShow: 4, // Default for desktop
-      slidesToScroll: 1,
-      responsive: [
-         {
-            breakpoint: 1024, // Tablet and below: 3 items
-            settings: {
-               slidesToShow: 3,
-               slidesToScroll: 1,
-               infinite: true,
-               dots: false
-            }
-         },
-         {
-            breakpoint: 768, // Mobile landscape and below: 2 items
-            settings: {
-               slidesToShow: 2,
-               slidesToScroll: 1
-            }
-         },
-         {
-            breakpoint: 480, // Mobile portrait and below: 1 item
-            settings: {
-               slidesToShow: 1,
-               slidesToScroll: 1
-            }
-         }
-      ]
-   });
-</script>
+
 
 
 <!-- Arrival Section -->
