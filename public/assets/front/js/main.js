@@ -36,33 +36,44 @@
 
 
 	/**/
-  $('.product-slider').slick({
-	infinite: true,
-	autoplay: true,
-	 slidesToShow: 4,
-	 focusOnSelect: true,
-	 dots:true,
-	 responsive: [
-	   {
-	     breakpoint: 768,
-	     settings: {
-	       arrows: false,
-	       //centerMode: true,
-	       slidesToShow: 3,
-		   dots:true
-	     }
-	   },
-	   {
-	     breakpoint: 580,
-	     settings: {
-	       arrows: false,
-	       //centerMode: true,
-	       slidesToShow: 1,
-		   dots:true,
-	     }
-	   }
-	 ]
+	$('.product-slider').slick({
+		infinite: true,
+		autoplay: true,
+		slidesToShow: 4, // Desktop view
+		slidesToScroll: 1,
+		focusOnSelect: true,
+		dots: true,
+		responsive: [
+			{
+				breakpoint: 1024, // Tablet and smaller devices
+				settings: {
+					slidesToShow: 3, // Show 3 items
+					slidesToScroll: 1,
+					arrows: false,
+					dots: true,
+				}
+			},
+			{
+				breakpoint: 768, // Small tablets and large phones
+				settings: {
+					slidesToShow: 2, // Show 2 items
+					slidesToScroll: 1,
+					arrows: false,
+					dots: true,
+				}
+			},
+			{
+				breakpoint: 576, // Mobile devices
+				settings: {
+					slidesToShow: 1, // Show 1 item
+					slidesToScroll: 1,
+					arrows: false,
+					dots: true,
+				}
+			}
+		]
 	});
+	
 	/**/
 		/**/
   $('.product-slider-detail').slick({

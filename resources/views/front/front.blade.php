@@ -106,7 +106,7 @@ $array = [];
       <div class="product-content">
          <div class="container">
             <!-- Add 'slider' class here to initialize slick -->
-            <div class="row product-slider">
+            <div class="product-slider">
                @foreach (array_slice($Home['category'], 0, 6) as $category)
                <!-- Limit to 4 categories -->
                <div class="col-md-3">
@@ -197,6 +197,25 @@ $array = [];
                               OFF</span>
                         </div>
                      </div>
+                     @php
+                    $rev = $productList->reviewtotal();
+                    $star = $rev->reviewtotal/20;
+                    $price = $productList->getproductPrice();
+                    @endphp
+                     <div class="plist comment-rating ratings-container mb-0" style="display: flex; justify-content: center;">
+                        <div class="ratings-full">
+                            <span class="ratings" style="width:80%"></span>
+                            <span class="tooltiptext tooltip-top">
+                                <div class="star_rating">
+                                    <span class="fa fa-star {{($star >= 1)?'checked':''}}"></span>
+                                    <span class="fa fa-star {{($star >= 2)?'checked':''}}"></span>
+                                    <span class="fa fa-star {{($star >= 3)?'checked':''}}"></span>
+                                    <span class="fa fa-star {{($star >= 4)?'checked':''}}"></span>
+                                    <span class="fa fa-star {{($star >= 5)?'checked':''}}"></span>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
                      <div class="cart-btn-show">
                         <a href="" data-id="{{ $productList->id }}"
                            data-q="{{ $productList->minquantity }}"
