@@ -75,7 +75,7 @@
 	   {
 	     breakpoint: 768,
 	     settings: {
-	       arrows: false,
+	       arrows: true,
 	       slidesToShow: 3,
 		   dots:true
 	     }
@@ -83,7 +83,7 @@
 	   {
 	     breakpoint: 580,
 	     settings: {
-	       arrows: false,
+	       arrows: true,
 	       slidesToShow: 1,
 		   dots:true,
 	     }
@@ -224,3 +224,29 @@ $(document).ready(function () {
 	};
 	mobileMenuOutsideClick();
   
+	$('.testimonial-slider').slick({
+		infinite: true,
+		autoplay: true,
+		slidesToShow: 4,
+		dots: true,
+		arrows:false,
+		focusOnSelect: true,
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					arrows: false,
+					slidesToShow: 3,
+					dots: true
+				}
+			},
+			{
+				breakpoint: 580,
+				settings: {
+					arrows: false,
+					slidesToShow: 1,
+					dots: true
+				}
+			}
+		]
+	});

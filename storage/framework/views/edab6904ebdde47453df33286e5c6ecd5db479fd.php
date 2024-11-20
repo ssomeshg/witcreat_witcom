@@ -389,90 +389,69 @@ $array = [];
    </div>
 </section>
 <!-- Our Shop End -->
+<section>
 <div class="testimonial-section">
-   <h2 style="color:black;">What People Say About Us</h2>
-   <div class="testimonial-slider">
-       <div class="testimonial-card"> 
-           <p class="testimonial-text">Amet minim mollit non deserunt ullamco </p>
-           <div class="testimonial-author">
-            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
-               <img src="<?php echo e(asset('assets/front/images/t1.png')); ?>" alt="Customer Image">
-               <p>Anisa zahra</p>
-               <span>Customer</span>
-           </div>
-       </div>
-       <div class="testimonial-card"> 
-         <p class="testimonial-text">Amet minim mollit non deserunt ullamco </p>
-         <div class="testimonial-author">
-          <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
-             <img src="<?php echo e(asset('assets/front/images/t2.png')); ?>" alt="Customer Image">
-             <p>Anisa zahra</p>
-             <span>Customer</span>
-         </div>
-     </div>
-     <div class="testimonial-card"> 
-      <p class="testimonial-text">Amet minim mollit non deserunt ullamco </p>
-      <div class="testimonial-author">
-       <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
-          <img src="<?php echo e(asset('assets/front/images/t1.png')); ?>" alt="Customer Image">
-          <p>Anisa zahra</p>
-          <span>Customer</span>
-      </div>
-  </div>
-       <!-- Second row of testimonials -->
-       <div class="testimonial-card"> 
-         <p class="testimonial-text">Amet minim mollit non deserunt ullamco </p>
-         <div class="testimonial-author">
-          <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
-             <img src="<?php echo e(asset('assets/front/images/t2.png')); ?>" alt="Customer Image">
-             <p>Anisa zahra</p>
-             <span>Customer</span>
-         </div>
-     </div>
-     <div class="testimonial-card"> 
-      <p class="testimonial-text">Amet minim mollit non deserunt ullamco </p>
-      <div class="testimonial-author">
-       <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
-          <img src="<?php echo e(asset('assets/front/images/t1.png')); ?>" alt="Customer Image">
-          <p>Anisa zahra</p>
-          <span>Customer</span>
-      </div>
-  </div>
-  <div class="testimonial-card"> 
-   <p class="testimonial-text">Amet minim mollit non deserunt ullamco </p>
-   <div class="testimonial-author">
-    <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
-       <img src="<?php echo e(asset('assets/front/images/t2.png')); ?>" alt="Customer Image">
-       <p>Anisa zahra</p>
-       <span>Customer</span>
-   </div>
+    <h2>What People Say About Us</h2>
+    <div class="testimonial-slider">
+        <div class="testimonial-card">
+            <p class="testimonial-text">Amet minim mollit non deserunt ullamco</p>
+            <div class="testimonial-author">
+                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                <img src="<?php echo e(asset('assets/front/images/t1.png')); ?>" alt="Customer Image">
+                <p>Anisa Zahra</p>
+                <span>Customer</span>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <p class="testimonial-text">Amet minim mollit non deserunt ullamco</p>
+            <div class="testimonial-author">
+                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                <img src="<?php echo e(asset('assets/front/images/t2.png')); ?>" alt="Customer Image">
+                <p>Anisa Zahra</p>
+                <span>Customer</span>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <p class="testimonial-text">Amet minim mollit non deserunt ullamco</p>
+            <div class="testimonial-author">
+                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                <img src="<?php echo e(asset('assets/front/images/t2.png')); ?>" alt="Customer Image">
+                <p>Anisa Zahra</p>
+                <span>Customer</span>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <p class="testimonial-text">Amet minim mollit non deserunt ullamco</p>
+            <div class="testimonial-author">
+                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                <img src="<?php echo e(asset('assets/front/images/t2.png')); ?>" alt="Customer Image">
+                <p>Anisa Zahra</p>
+                <span>Customer</span>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <p class="testimonial-text">Amet minim mollit non deserunt ullamco</p>
+            <div class="testimonial-author">
+                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                <img src="<?php echo e(asset('assets/front/images/t2.png')); ?>" alt="Customer Image">
+                <p>Anisa Zahra</p>
+                <span>Customer</span>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <p class="testimonial-text">Amet minim mollit non deserunt ullamco</p>
+            <div class="testimonial-author">
+                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                <img src="<?php echo e(asset('assets/front/images/t2.png')); ?>" alt="Customer Image">
+                <p>Anisa Zahra</p>
+                <span>Customer</span>
+            </div>
+        </div>
+        <!-- Add more testimonial cards as needed -->
+    </div>
 </div>
-   </div>
-   <div class="slider-navigation">
-       <span class="nav-dot active" data-slide="0"></span>
-       <span class="nav-dot" data-slide="1"></span>
-   </div>
-</div>
+</section>
 
-<script>
-   const slider = document.querySelector('.testimonial-slider');
-   const dots = document.querySelectorAll('.nav-dot');
-
-   let currentSlide = 0;
-
-   function updateSlider(index) {
-       const offset = -index * 100 / dots.length;
-       slider.style.transform = `translateX(${offset}%)`;
-       dots.forEach(dot => dot.classList.remove('active'));
-       dots[index].classList.add('active');
-       currentSlide = index;
-   }
-
-   // Add click event to each dot
-   dots.forEach((dot, index) => {
-       dot.addEventListener('click', () => updateSlider(index));
-   });
-</script>
 
 
 
