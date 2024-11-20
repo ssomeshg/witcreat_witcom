@@ -405,7 +405,7 @@ footer .container {
     width: 100%;
     padding: 31px 100px;
     top: 80px;
-    z-index: 90;
+    z-index: 10;
     border-radius: 20px;
 }
 .footer-bg .container .footer-newsletter h3 {
@@ -6592,9 +6592,12 @@ xcustom form elements
         font-weight: 700;
     }
     .fashion-left {
-        min-height: 500px;
+        min-height: 260px;
+        border-radius: 10px;
     }
-
+    .fs-shop {
+        height: 103px;
+    }
     .product-content .container .row {
         display: flex;
         overflow-x: scroll;
