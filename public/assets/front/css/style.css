@@ -6252,9 +6252,9 @@ xcustom form elements
     background-position: left;
     padding: 50px 0px;
 }
-.arrival-content {
+/* .arrival-content {
     padding: 50px 0px;
-}
+} */
 .arrival-content .arrival-items img {
     width: 100%;
     max-height: 280px;
@@ -6375,6 +6375,11 @@ xcustom form elements
     font-weight: 400;
     transition: all 0.2s linear;
 }
+.show-content .show-Btn:hover{
+    background-color: #432207;
+    color: white;
+    transition: all 0.2s linear;
+}
 .show-box .row {
     display: flex;
     align-items: center;
@@ -6419,6 +6424,11 @@ xcustom form elements
     background: transparent;
     border: 1px solid white;
     padding: 4px 8px;
+}
+.c-content button:hover{
+    background-color: #432207;
+    color: white;
+    transition: all 0.2s linear;
 }
 .c-full {
     margin-top: 30px;
@@ -6623,7 +6633,7 @@ xcustom form elements
 
     /* Arrival content */
     .arrival-content .row {
-        display: flex;
+        /* display: flex; */
         overflow-x: scroll;
         padding: 27px 0px;
     }
@@ -6632,6 +6642,7 @@ xcustom form elements
     }
     .arrival-content .row .col-md-3 {
         min-width: max-content;
+        margin-top: 22px;
     }
     .fs-logo {
         width: 160px;
@@ -6696,5 +6707,9 @@ xcustom form elements
 
     .marquee-section {
         padding: 26px 0;
+    }
+
+    .navbar-nav{
+        display:contents;
     }
 }

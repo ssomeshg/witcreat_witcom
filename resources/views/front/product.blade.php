@@ -135,6 +135,7 @@
                                             @if(!empty($price->discount) || !empty($price->CustomerGroup) && $price->CustomerGroup->amount != 0)
                                             <span class="original-price">{{($StoreConfig->currencysymbol())?$StoreConfig->currencysymbol():'Rs.'}} {{ $price->VendorPrice }}</span>
                                             @endif
+                                            @if(false)
                                             <span class="offer-percent">
                                                 (@if(!empty($price->CustomerGroup)) 
                                                     @if($price->CustomerGroup->amount) 
@@ -148,6 +149,7 @@
                                                 
                                                 @if(!empty($price->discount)) & Additional {{$price->discount->number}}{{($price->discount->type == '%')?'%':'Rs'}} off as a regular discount @endif )
                                             </span>
+                                            @endif
                                         </div>
                                     </div>
                                     {{-- @else
@@ -292,7 +294,7 @@
                                                         </div>
                                                      </a>
                                                   </div>
-                                                  <div class="col-md-1 col-sm-1 col-xs-3 icon-single">
+                                                  <div class="col-md-1 col-sm-1 col-xs-3 icon-single d-none">
                                                      <a href="" class="icon-inner">
                                                         <div class="icon-img">
                                                            <span><img src="https://thesilkastic.com/public/assets/images/icons/tax.png" class="img-responsive center-block" alt="slider2"></span>
@@ -322,7 +324,7 @@
                                                         </div>
                                                      </a>
                                                   </div>
-                                                  <div class="col-md-1 col-sm-1 col-xs-4 icon-single">
+                                                  <div class="col-md-1 col-sm-1 col-xs-4 icon-single d-none">
                                                      <a href="" class="icon-inner">
                                                         <div class="icon-img">
                                                            <span><img src="https://thesilkastic.com/public/assets/images/icons/cod.jpg" class="img-responsive center-block" alt="slider2"></span>
@@ -332,7 +334,7 @@
                                                         </div>
                                                      </a>
                                                   </div>
-                                				  <div class="col-md-1 col-sm-1 col-xs-4 icon-single">
+                                				  <div class="col-md-1 col-sm-1 col-xs-4 icon-single d-none">
                                                      <a href="" class="icon-inner">
                                                         <div class="icon-img">
                                                            <span><img src="https://thesilkastic.com/public/assets/images/icons/return.png" class="img-responsive center-block" alt="slider2"></span>
@@ -342,7 +344,7 @@
                                                         </div>
                                                      </a>
                                                   </div>
-                                                  <div class="col-md-1 col-sm-1 col-xs-4 icon-single">
+                                                  <div class="col-md-1 col-sm-1 col-xs-4 icon-single d-none">
                                                      <a href="" class="icon-inner">
                                                         <div class="icon-img">
                                                            <span><img src="https://thesilkastic.com/public/assets/images/icons/return.png" class="img-responsive center-block" alt="slider2"></span>
