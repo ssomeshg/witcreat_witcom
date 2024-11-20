@@ -312,6 +312,7 @@
                                                 <option value="Africa/Addis_Ababa" {{($data->time_zone === 'Africa/Addis_Ababa' )?'selected':''}}>Africa/Addis_Ababa</option>											
                                                 <option value="Africa/Algiers" {{($data->time_zone === 'Africa/Algiers' )?'selected':''}}>Africa/Algiers</option>
                                                 <option value="Asia/Kolkata" {{($data->time_zone === 'Asia/Kolkata' )?'selected':''}}>Asia/Kolkata</option>
+                                                <option value="Europe/London" {{($data->time_zone === 'Europe/London' )?'selected':''}}>Europe/London</option>
                                             </select>
                                         </div>
                                 </div>
