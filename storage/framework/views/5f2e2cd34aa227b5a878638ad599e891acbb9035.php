@@ -86,7 +86,7 @@
                                 <ul class="collapsemenu">
                                 <li>
                                 <a class="firstlevel-collpase" href="javascript:void(0);">Price</a> 
-                                <a aria-controls="pricefilter1" aria-expanded="false" class="collapse-trigger collapsed" data-toggle="collapse" href="#pricefilter1" role="button"></a>
+                                <a aria-controls="pricefilter1" aria-expanded="false" class="" data-toggle="collapse" href="#pricefilter1" role="button"><i class="fa fa-long-arrow-right"></i></a>
                                 <div aria-expanded="false" class="collapse" id="pricefilter1" style="">
                                     <div class="well">
                                         <div class="filterlist">
@@ -114,8 +114,8 @@
                                     <li>
                                         <a class="firstlevel-collpase" href="javascript:void(0);"><?php echo e($attributeValues->attribute_name); ?></a>
                                         <a aria-controls="delivery-availability<?php echo e($i); ?>" aria-expanded="false"
-                                            class="collapse-trigger collapsed" data-toggle="collapse"
-                                            href="#delivery-availability<?php echo e($i); ?>" role="button"></a>
+                                            class="" data-toggle="collapse"
+                                            href="#delivery-availability<?php echo e($i); ?>" role="button"><i class="fa fa-long-arrow-right"></i></a>
                                         <div aria-expanded="false" class="collapse" id="delivery-availability<?php echo e($i); ?>" style="">
                                             <div class="well">
                                                 <div class="filterlist">

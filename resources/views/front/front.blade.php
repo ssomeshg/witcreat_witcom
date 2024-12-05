@@ -35,7 +35,7 @@ $array = [];
 @endif
 
 <section class="marquee-section">
-   <div class="marqueeScroll-Main">
+   <div class="marqueeScroll-Main" style="color: #560835;">
       <div class="marqueeContent">
          <img src="{{ URL::asset('assets/media/banner/flower.png') }}" alt="">
          <p>Enjoy FREE Delivery on Domestic Orders over Rs. 2,000! *T&C</p>
@@ -203,7 +203,7 @@ $array = [];
                     $price = $productList->getproductPrice();
                     @endphp
                      <div class="plist comment-rating ratings-container mb-0" style="display: flex; justify-content: center;">
-                        <div class="ratings-full">
+                        <div class="ratings-full" style="color: #432207;">
                             <span class="ratings" style="width:80%"></span>
                             <span class="tooltiptext tooltip-top">
                                 <div class="star_rating">
@@ -216,7 +216,7 @@ $array = [];
                             </span>
                         </div>
                     </div>
-                     <div class="cart-btn-show">
+                     <div class="cart-btn-show" style="padding-right:20px;">
                         <a href="" data-id="{{ $productList->id }}"
                            data-q="{{ $productList->minquantity }}"
                            class=" btn-cart2 {{ $productList->soldout != 'off' ? 'disabled' : '' }}"
@@ -329,7 +329,7 @@ $array = [];
                   <div class="c-image">
                      <img src="{{ URL::asset('assets/media/products/c1.png') }}" alt="">
                      <div class="c-bg"></div>
-                     <div class="c-button">
+                     <div class="c-button" onclick="playYouTubeVideo(this, '6Vc1XHrmxNA')">
 
                         <svg width="11" height="15" viewBox="0 0 11 15" fill="none"
                            xmlns="http://www.w3.org/2000/svg">
@@ -346,7 +346,7 @@ $array = [];
                   <div class="c-image">
                      <img src="{{ URL::asset('assets/media/products/c1.png') }}" alt="">
                      <div class="c-bg"></div>
-                     <div class="c-button">
+                     <div class="c-button" onclick="playYouTubeVideo(this, '6Vc1XHrmxNA')">
                         <svg width="11" height="15" viewBox="0 0 11 15" fill="none"
                            xmlns="http://www.w3.org/2000/svg">
                            <path
@@ -363,7 +363,7 @@ $array = [];
                   <div class="c-image">
                      <img src="{{ URL::asset('assets/media/products/c1.png') }}" alt="">
                      <div class="c-bg"></div>
-                     <div class="c-button">
+                     <div class="c-button"  onclick="playYouTubeVideo(this, '6Vc1XHrmxNA')">
                         <svg width="11" height="15" viewBox="0 0 11 15" fill="none"
                            xmlns="http://www.w3.org/2000/svg">
                            <path
@@ -379,6 +379,27 @@ $array = [];
       </div>
    </div>
 </section>
+<script>
+   function playYouTubeVideo(button, videoId) {
+      const container = button.closest('.c-image');
+
+      if (!container.querySelector('iframe')) {
+         const iframe = document.createElement('iframe');
+         iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&controls=1`;
+         iframe.frameBorder = "0";
+         iframe.allow = "autoplay; encrypted-media";
+         iframe.allowFullscreen = true;
+         iframe.style.position = "absolute";
+         iframe.style.top = "0";
+         iframe.style.left = "0";
+         iframe.style.width = "100%";
+         iframe.style.height = "100%";
+         iframe.style.zIndex = "10";
+         
+         container.appendChild(iframe);
+      }
+   }
+</script>
 
 <!-- Our Shop Start -->
 <section class="our-shop">
@@ -400,7 +421,7 @@ $array = [];
             <div class="fashion-counter">
                <div class="count-fashion"><h1>2024</h1><p>Fifash Founded</p></div>
                <div class="count-fashion"><h1>8900+</h1><p>Product Sold</p></div>
-               <div class="count-fashion"><h1>3100+</h1><p>Best Reviews</p></div>
+               <div class="count-fashion1"><h1>3100+</h1><p>Best Reviews</p></div>
             </div>
          </div>
       </div>

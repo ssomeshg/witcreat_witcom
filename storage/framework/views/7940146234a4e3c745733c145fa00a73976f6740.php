@@ -135,6 +135,7 @@
                                             <?php if(!empty($price->discount) || !empty($price->CustomerGroup) && $price->CustomerGroup->amount != 0): ?>
                                             <span class="original-price"><?php echo e(($StoreConfig->currencysymbol())?$StoreConfig->currencysymbol():'Rs.'); ?> <?php echo e($price->VendorPrice); ?></span>
                                             <?php endif; ?>
+                                            <?php if(false): ?>
                                             <span class="offer-percent">
                                                 (<?php if(!empty($price->CustomerGroup)): ?> 
                                                     <?php if($price->CustomerGroup->amount): ?> 
@@ -148,6 +149,7 @@
                                                 
                                                 <?php if(!empty($price->discount)): ?> & Additional <?php echo e($price->discount->number); ?><?php echo e(($price->discount->type == '%')?'%':'Rs'); ?> off as a regular discount <?php endif; ?> )
                                             </span>
+                                            <?php endif; ?>
                                         </div>
                                     </div>
                                     
@@ -218,7 +220,7 @@
 											</div>
 											<div class="detcnt col-md-12">
                                                 <?php if($product->soldout == 'off'): ?>
-												    <span class="text-green" style="color: #560835">In Stock <?php echo e($product->quantity); ?> quantity</span>
+												    <span class="text-green" style="color: #432207">In Stock <?php echo e($product->quantity); ?> quantity</span>
                                                 <?php else: ?>
                                                     <span style="color: red">Out Off Stock</span>
                                                 <?php endif; ?>
@@ -278,70 +280,50 @@
 										</div>
 					                    <div class="col-lg-12 col-md-12 col-sm-12 detcateg col-xs- nopad categories-wraper">
 										    <div class="row">
-                                                  <div class="col-md-1 col-sm-1 col-xs-3 icon-single">
+                                                  <div class="col-md-2 col-sm-1 col-xs-2 icon-single">
                                                      <a href="" class="icon-inner">
                                                         <div class="icon-img">
-                                                           <span><img src="https://thesilkastic.com/public/assets/images/icons/i1.png" class="img-responsive center-block" alt="slider2"></span>
+                                                           <span><img src="<?php echo e(asset('assets/images/icons/world.png')); ?>" class="img-responsive center-block" alt="slider2"></span>
                                                         </div>
                                                         <div class="icon-name">
                                                            <span>Worldwide Shipping</span>
                                                         </div>
                                                      </a>
                                                   </div>
-                                                  <div class="col-md-1 col-sm-1 col-xs-3 icon-single">
+                                                  <div class="col-md-2 col-sm-1 col-xs-2 icon-single">
                                                      <a href="" class="icon-inner">
                                                         <div class="icon-img">
-                                                           <span><img src="https://thesilkastic.com/public/assets/images/icons/tax.png" class="img-responsive center-block" alt="slider2"></span>
-                                                        </div>
-                                                        <div class="icon-name">
-                                                           <span>Inclusive of Tax</span>
-                                                        </div>
-                                                     </a>
-                                                  </div>
-                                                  <div class="col-md-1 col-sm-1 col-xs-3 icon-single">
-                                                     <a href="" class="icon-inner">
-                                                        <div class="icon-img">
-                                                           <span><img src="https://thesilkastic.com/public/assets/images/icons/i3.png" class="img-responsive center-block" alt="slider2"></span>
+                                                           <span><img src="<?php echo e(asset('assets/images/icons/5.png')); ?>" class="img-responsive center-block" alt="slider2"></span>
                                                         </div>
                                                         <div class="icon-name">
                                                            <span>Best Quality</span>
                                                         </div>
                                                      </a>
                                                   </div>
-                                                  <div class="col-md-1 col-sm-1 col-xs-3 icon-single">
+                                                  <div class="col-md-2 col-sm-1 col-xs-2 icon-single d-none">
                                                      <a href="" class="icon-inner">
                                                         <div class="icon-img">
-                                                           <span><img src="https://thesilkastic.com/public/assets/images/icons/i4.png" class="img-responsive center-block" alt="slider2"></span>
-                                                        </div>
-                                                        <div class="icon-name">
-                                                           <span>Best Price</span>
-                                                        </div>
-                                                     </a>
-                                                  </div>
-                                                  <div class="col-md-1 col-sm-1 col-xs-4 icon-single">
-                                                     <a href="" class="icon-inner">
-                                                        <div class="icon-img">
-                                                           <span><img src="https://thesilkastic.com/public/assets/images/icons/cod.jpg" class="img-responsive center-block" alt="slider2"></span>
+                                                           <span><img src="<?php echo e(asset('assets/images/icons/2.png')); ?>" class="img-responsive center-block" alt="slider2"></span>
                                                         </div>
                                                         <div class="icon-name">
                                                            <span>COD</span>
                                                         </div>
                                                      </a>
                                                   </div>
-                                				  <div class="col-md-1 col-sm-1 col-xs-4 icon-single">
+                                				  <div class="col-md-2 col-sm-1 col-xs-2 icon-single d-none">
                                                      <a href="" class="icon-inner">
                                                         <div class="icon-img">
-                                                           <span><img src="https://thesilkastic.com/public/assets/images/icons/return.png" class="img-responsive center-block" alt="slider2"></span>
+                                                           <span><img src="<?php echo e(asset('assets/images/icons/4.png')); ?>" class="img-responsive center-block" alt="slider2"></span>
                                                         </div>
                                                         <div class="icon-name">
                                                            <span>Return</span>
                                                         </div>
                                                      </a>
                                                   </div>
-                                                  <div class="col-md-1 col-sm-1 col-xs-4 icon-single">
+                                                  <div class="col-md-2 col-sm-1 col-xs-2 icon-single d-none">
                                                      <a href="" class="icon-inner">
                                                         <div class="icon-img">
-                                                           <span><img src="https://thesilkastic.com/public/assets/images/icons/return.png" class="img-responsive center-block" alt="slider2"></span>
+                                                           <span><img src="<?php echo e(asset('assets/images/icons/1.png')); ?>" class="img-responsive center-block" alt="slider2"></span>
                                                         </div>
                                                         <div class="icon-name">
                                                            <span>No Exchange</span>
@@ -362,7 +344,7 @@
 											    	$link = route('front.getCategory',['category'=>$value->Category_url]);
 											    ?>
 
-											       <a href="<?php echo e($link); ?>" style="color:#560835"><span><?php echo e($value->category_name); ?></span></a>
+											       <a href="<?php echo e($link); ?>" style="color:#432207"><span><?php echo e($value->category_name); ?></span></a>
 											    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 												<!--<span><?php echo e($product->getcategort()); ?></span>-->
 											</div>

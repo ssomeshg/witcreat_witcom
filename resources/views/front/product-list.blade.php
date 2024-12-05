@@ -95,7 +95,7 @@
         <div class="arrival-content">
             <div class="container">
                <div class="row">
-                  <div class="col-md-3">
+                  <div class="col-md-3 col-xs-12" style="margin-top: 20px;">
                      <div class="arrival-items">
                         <div class="arrival-img prd-img">
                            <img src="{{ URL::asset('assets/media/products/a1.png') }}" alt="">
@@ -143,7 +143,7 @@
                        $price = $productList->getproductPrice();
                        @endphp
                         <div class="plist comment-rating ratings-container mb-0" style="display: flex; justify-content: center;">
-                           <div class="ratings-full">
+                           <div class="ratings-full" style="color: #432207;">
                                <span class="ratings" style="width:80%"></span>
                                <span class="tooltiptext tooltip-top">
                                    <div class="star_rating">
@@ -156,7 +156,7 @@
                                </span>
                            </div>
                        </div>
-                        <div class="cart-btn-show">
+                        <div class="cart-btn-show" style="padding-right:20px;">
                            <a href="" data-id="{{ $productList->id }}"
                               data-q="{{ $productList->minquantity }}"
                               class=" btn-cart2 {{ $productList->soldout != 'off' ? 'disabled' : '' }}"
@@ -186,8 +186,20 @@
 ">No Product found</h2>
     @endforelse
 </ul>
-{!! $products->links() !!}
+<div class="pagination-wrapper">
+    {{ $products->links() }}
+</div>
 <script>
     console.log("{{($products->total())?$products->total():0}}");
     document.getElementById("productCounts").innerHTML= "( {{($products->total())?$products->total():0}} ) ";
 </script>
+<style>
+    .pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+        background-color: #432207!important;
+        border-color: #432207!important;
+        color: white!important;
+    }
+    .pagination>li>a, .pagination>li>span {
+        color: #432207!important;
+    }
+</style>

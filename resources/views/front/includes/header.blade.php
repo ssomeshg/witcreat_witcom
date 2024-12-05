@@ -69,7 +69,7 @@
                               <img src="{{URL::asset('assets/media/banner/logo.png')}}" class="img-responsive logo-image" alt="logo">
                            </a>
                         </div>
-                        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i> </a>
+                        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><img src="{{URL::asset('assets/img/menubar.png')}}" alt="menu bar" style="    width: 100%; height: 38px;"></i> </a>
 
                         <aside id="colorlib-aside" role="complementary" class="js-fullheight">
                            <nav id="colorlib-main-menu" role="navigation">
